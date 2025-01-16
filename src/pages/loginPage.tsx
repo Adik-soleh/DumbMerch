@@ -1,20 +1,28 @@
 import LoginInput from "@/components/elements/inputs/LoginInput";
-import { Flex, Heading } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 
 function LoginPage() {
   return (
-    <Flex
-      direction={"column"}
-      w={"4/12"}
-      mt={"6rem"}
-      bgColor={"#181818"}
-      p={"2rem"}
-      gap={"0.5rem"}
-      rounded={"md"}
+    <Box 
+      display="flex" 
+      justifyContent="center" 
+      alignItems="center" 
+      px={{ base: "1rem", md: "0" }}
     >
-      <Heading fontSize={"2xl"}>Login</Heading>
-      <LoginInput/>
-    </Flex>
+      <Flex
+        direction={"column"}
+        w={{ base: "90%", md: "50vh"}}
+        maxW="400px"
+        bgColor={"#181818"}
+        p={{ base: "1rem", md: "2rem" }}
+        gap={"0.5rem"}
+        rounded={"md"}
+        boxShadow="lg"
+      >
+        <Heading fontSize={{ base: "xl", md: "2xl" }} textAlign="center">Login</Heading>
+        <LoginInput />
+      </Flex>
+    </Box>
   );
 }
 

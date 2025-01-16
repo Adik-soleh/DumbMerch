@@ -5,8 +5,8 @@ function LoginInput() {
   return (
     <form action="">
         <Flex flexDir={"column"} gap={"1rem"}>
-          <Input />
-          <Input />
+          <Input placeholder="Username" size={{ base: "sm", md: "md" }} />
+          <Input placeholder="Password" size={{ base: "sm", md: "md" }} type="password" />
           <RedButton label={"Login"} />
         </Flex>
       </form>
