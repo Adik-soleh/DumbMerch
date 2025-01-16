@@ -14,6 +14,8 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import { BiMessageAdd } from "react-icons/bi";
+import { BsPerson } from "react-icons/bs";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 
 function UserShopLayout() {
@@ -28,7 +30,7 @@ function UserShopLayout() {
         position={"sticky"}
         top={0}
         zIndex={1000}
-        bgColor={"#181818"}
+        bgColor={"#2223"}
       >
         <Image
           src={Frame}
@@ -83,24 +85,30 @@ function UserShopLayout() {
             </DrawerHeader>
 
             <DrawerBody>
-              <Flex gap={"1rem"}>
+              <Flex gap={"2rem"}>
                 <NavLink
                   to="/Complain"
                   style={({ isActive }) => ({ color: isActive ? "red" : "" })}
                 >
-                  Complain
+                  <Flex gap={"0.5rem"}>
+                    <BiMessageAdd color="white" size={20} /> Complain
+                  </Flex>
                 </NavLink>
                 <NavLink
                   to="/profile"
                   style={({ isActive }) => ({ color: isActive ? "red" : "" })}
                 >
-                  Profile
+                  <Flex gap={"0.5rem"}>
+                    <BsPerson color="white" size={20} /> Profile
+                  </Flex>
                 </NavLink>
                 <NavLink
                   to="/Logout"
                   style={({ isActive }) => ({ color: isActive ? "red" : "" })}
                 >
-                  Logout
+                  <Flex gap={"0.5rem"}>
+                    <BiMessageAdd color="white" size={20} /> Logout
+                  </Flex>
                 </NavLink>
               </Flex>
             </DrawerBody>

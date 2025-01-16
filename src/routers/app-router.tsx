@@ -1,5 +1,6 @@
 import { AuthLayout } from "@/layouts/authLayouts";
 import UserShopLayout from "@/layouts/UserShopLayout";
+import DetailProductPage from "@/pages/DetailProductPage";
 import LoginPage from "@/pages/loginPage";
 import ProductPage from "@/pages/ProductPage";
 import ProfilePage from "@/pages/ProfilePage";
@@ -19,6 +20,9 @@ const AppRouter = createBrowserRouter([
         path: "profile",
         element: <ProfilePage />,
       },
+      {
+        path: "detail-product/:id",
+        element: <DetailProductPage />,}
     ],
   },
   {

@@ -5,5 +5,6 @@ export interface MyTransactionProps {
     date: string;
     price: number;
     total: number;
-    stock: number
+    stock: number;
+    description: string
   }
