@@ -1,0 +1,56 @@
+.page-heading {
+    margin-bottom: 27px;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .table-container {
+    font-size: 1rem;
+    background-color: #303030;
+  }
+  
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  .custom-table th {
+    background-color: #303030;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .odd-row {
+    background-color: #232323;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .edit-btn,
+  .delete-btn {
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .edit-btn {
+    background-color: #56c05a;
+  }
+  
+  .delete-btn {
+    background-color: #f74d4d;
+  }
+  

@@ -3,7 +3,7 @@ import { dummyProduct } from "@/data/dummyProduct";
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import RedButton from "@/components/elements/button/RedButton";
 
-function DetailProductPage() {
+function ListProductPage() {
   const { id } = useParams<{ id: string }>();
   const product = dummyProduct.find((item) => item.id.toString() === id);
 
@@ -53,4 +53,4 @@ function DetailProductPage() {
   );
 }
 
-export default DetailProductPage;
+export default ListProductPage;

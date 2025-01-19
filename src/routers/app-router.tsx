@@ -1,6 +1,10 @@
+import AdminLayout from "@/layouts/AdminLayout";
 import { AuthLayout } from "@/layouts/authLayouts";
 import UserShopLayout from "@/layouts/UserShopLayout";
 import DetailProductPage from "@/pages/DetailProductPage";
+import { EditCategory } from "@/pages/EditCategory";
+import ListCategoryPage from "@/pages/ListCategoryPage";
+import ListProductPage from "@/pages/ListProductPage";
 import LoginPage from "@/pages/loginPage";
 import ProductPage from "@/pages/ProductPage";
 import ProfilePage from "@/pages/ProfilePage";
@@ -39,6 +43,24 @@ const AppRouter = createBrowserRouter([
       },
     ],
   },
+  {
+    path:"/admin",
+    element: <AdminLayout/>,
+    children: [
+      {
+        path: "category",
+        element: <ListCategoryPage />,
+      },
+      {
+        path: "edit-category/:id",
+        element: <EditCategory />,
+      },
+      {
+        path: "product",
+        element: <ListProductPage />,
+      },
+    ]
+  }
 ]);
 
 export default AppRouter;

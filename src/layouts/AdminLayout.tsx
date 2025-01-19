@@ -18,13 +18,13 @@ import { BiMessageAdd } from "react-icons/bi";
 import { BsPerson } from "react-icons/bs";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 
-function UserShopLayout() {
+function AdminLayout() {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Box>
-      <Flex
+     <Flex
         p={"1rem"}
         justify={"space-between"}
         position={"sticky"}
@@ -47,16 +47,22 @@ function UserShopLayout() {
             Complain
           {/* </NavLink> */}
           <NavLink
-            to="/profile"
+            to="category"
             style={({ isActive }) => ({ color: isActive ? "red" : "" })}
           >
-            Profile
+            Category
           </NavLink>
           <NavLink
-            to="/admin"
+            to="product"
             style={({ isActive }) => ({ color: isActive ? "red" : "" })}
           >
-            Admin
+            Product
+          </NavLink>
+          <NavLink
+            to="/"
+            style={({ isActive }) => ({ color: isActive ? "red" : "" })}
+          >
+            Seller
           </NavLink>
         </Flex>
 
@@ -87,28 +93,36 @@ function UserShopLayout() {
             <DrawerBody>
               <Flex gap={"2rem"} flexDir={"column"}>
                 {/* <NavLink
-                  to="/Complain"
+                  to=""
                   style={({ isActive }) => ({ color: isActive ? "red" : "" })}
                 > */}
-                <Flex gap={"0.5rem"}>
-                  <BiMessageAdd color="white" size={20} /> Complain
-                </Flex>
+                  <Flex gap={"0.5rem"}>
+                    <BiMessageAdd color="white" size={20} /> Complain
+                  </Flex>
                 {/* </NavLink> */}
                 <NavLink
-                  to="/profile"
+                  to="category"
                   style={({ isActive }) => ({ color: isActive ? "red" : "" })}
                 >
                   <Flex gap={"0.5rem"}>
-                    <BsPerson color="white" size={20} /> Profile
+                    <BsPerson color="white" size={20} /> Category
+                  </Flex>
+                </NavLink>
+                <NavLink
+                  to="product"
+                  style={({ isActive }) => ({ color: isActive ? "red" : "" })}
+                >
+                  <Flex gap={"0.5rem"}>
+                    <BsPerson color="white" size={20} /> Product
                   </Flex>
                 </NavLink>
                 {/* <NavLink
-                  to="/Logout"
+                  to="Logout"
                   style={({ isActive }) => ({ color: isActive ? "red" : "" })}
                 > */}
-                <Flex gap={"0.5rem"}>
-                  <BiMessageAdd color="white" size={20} /> Logout
-                </Flex>
+                  <Flex gap={"0.5rem"}>
+                    <BiMessageAdd color="white" size={20} /> Logout
+                  </Flex>
                 {/* </NavLink> */}
               </Flex>
             </DrawerBody>
@@ -125,4 +139,4 @@ function UserShopLayout() {
   );
 }
 
-export default UserShopLayout;
+export default AdminLayout;

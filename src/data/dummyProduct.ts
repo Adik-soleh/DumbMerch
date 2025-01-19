@@ -57,3 +57,11 @@ export const dummyProduct: MyTransactionProps[] = [
     description: "Mouse Pad berkualitas tinggi dengan desain ergonomis.",
   },
 ];
+
+export const items = [
+  { id: 1, category: "Electronics" },
+  { id: 2, category: "Home Appliances" },
+  { id: 3, category: "Furniture" },
+  { id: 4, category: "Electronics" },
+  { id: 5, category: "Accessories" },
+];
